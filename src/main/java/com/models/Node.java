@@ -1,13 +1,19 @@
 package com.models;
 
-import java.util.List;
+import java.util.LinkedList;
 
 public class Node {
     private String name;
     private String value;
-    private List<Node> children;
-    private List<Attribute> attributes;
+    private LinkedList<Node> children;
+    private LinkedList<Attribute> attributes;
     private Node parent;
+    
+    public Node(String name) {
+    	this.name = name;
+    	children = new LinkedList<Node>();
+    	attributes = new LinkedList<Attribute>();
+    }
 
     public String getName() {
         return name;
@@ -25,24 +31,16 @@ public class Node {
         this.value = value;
     }
 
-    public List<Node> getChildren() {
+    public LinkedList<Node> getChildren() {
         return children;
-    }
-
-    public void setChildren(List<Node> children) {
-        this.children = children;
     }
 
     public boolean hasChildren() {
         return children.size() > 0;
     }
 
-    public List<Attribute> getAttributes() {
+    public LinkedList<Attribute> getAttributes() {
         return attributes;
-    }
-
-    public void setAttributes(List<Attribute> attributes) {
-        this.attributes = attributes;
     }
 
     public boolean hasAttributes() {
