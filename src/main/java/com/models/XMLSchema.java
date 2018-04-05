@@ -1,4 +1,4 @@
-import java.util.HashMap;
+package com.models;
 
 public class XMLSchema {
 }

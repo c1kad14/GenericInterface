@@ -1,16 +1,12 @@
 package com.models;
 
 public class Attribute {
-    private Node node;
     private String name;
     private String value;
-
-    public Node getNode() {
-        return node;
-    }
-
-    public void setNode(Node nodeName) {
-        this.node = node;
+    
+    public Attribute(String attributeName, String attributeValue) {
+    	this.name = attributeName;
+    	this.value = attributeValue;
     }
 
     public String getName() {
